@@ -9,7 +9,7 @@ class Injector:		# Class for injection
     def __init__(self, path):	
         self.path = path
 
-# Function to inject iframe on victims flow
+# Function to inject iframe on victims flow (change iframe variable, line 20)
     def response(self, flow: http.HTTPFlow) -> None:	
         if self.path:
             html = BeautifulSoup(flow.response.content, "html.parser")
